@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-import variablae_load_5
-print("{}".format(variablae_load_5.a))
+if __name__ == "__main__":
+    import variablae_load_5
+    print("{}".format(variablae_load_5.a))
