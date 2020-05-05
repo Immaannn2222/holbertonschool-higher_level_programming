@@ -21,7 +21,7 @@ ptr0 = ptr1;
 ptr1 = ptr2;
 }
 *head = ptr0;
-while (ptr1 && ptr0)
+while (ptr1 != NULL && ptr0 != NULL)
 {
 if (ptr0->n == ptr1->n)
 {
@@ -29,9 +29,8 @@ ptr0 = ptr0->next;
 ptr1 = ptr1->next;
 }
 else
-{
 return (0);
-}
 }
 return (1);
 }
+
