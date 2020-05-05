@@ -13,6 +13,8 @@ listint_t *ptr2;
 ptr0 = NULL;
 ptr2 = NULL;
 ptr1 = *head;
+if (*head == NULL)
+return (1);
 while (ptr1 != NULL)
 {
 ptr2 = ptr1->next;
@@ -20,7 +22,6 @@ ptr1->next = ptr0;
 ptr0 = ptr1;
 ptr1 = ptr2;
 }
-return (1);
 *head = ptr0;
 while (ptr1  && ptr0)
 {
@@ -34,5 +35,5 @@ return (0);
 }
 if (ptr0 == NULL && ptr1 == NULL)
 return (1);
-return (1);
+return (0);
 }
