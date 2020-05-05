@@ -7,28 +7,36 @@
  */
 int is_palindrome(listint_t **head)
 {
-listint_t *tmp;
-int i = 0, j = 0;
-char *s = NULL;
+listint_t *ptr0;
+listint_t *ptr1;
+listint_t *ptr2;
+ptr0 = NULL;
+ptr2 = NULL;
+ptr1 = *head;
 if (*head == NULL)
 return (1);
-tmp = *head;
-while (tmp != NULL)
+while (ptr1 != NULL)
 {
-s[i] = tmp->n;
-i++;
-tmp = tmp->next;
+ptr2 = ptr1->next;
+ptr1->next = ptr0;
+ptr0 = ptr1;
+ptr1 = ptr2;
 }
-i--;
-while (j < i)
+*head = ptr0;
+
+
+while (ptr1 && ptr0)
 {
-if (s[j] == s[i])
+if (ptr0->n == ptr1->n)
 {
-j++;
-i--;
+ptr0 = ptr0->next;
+ptr1 = ptr1->next;
 }
 else
 return (0);
 }
+if (ptr0 == NULL && ptr2 == NULL)
+return (0);
+
 return (1);
 }
