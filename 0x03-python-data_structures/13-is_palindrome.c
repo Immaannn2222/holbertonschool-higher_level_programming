@@ -20,8 +20,9 @@ ptr1->next = ptr0;
 ptr0 = ptr1;
 ptr1 = ptr2;
 }
+return (1);
 *head = ptr0;
-while (ptr1 != NULL && ptr0 != NULL)
+while (ptr1  && ptr0)
 {
 if (ptr0->n == ptr1->n)
 {
