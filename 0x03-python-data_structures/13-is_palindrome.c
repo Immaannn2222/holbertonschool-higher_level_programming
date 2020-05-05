@@ -33,7 +33,5 @@ ptr1 = ptr1->next;
 else
 return (0);
 }
-if (ptr0 == NULL && ptr1 == NULL)
-return (1);
 return (1);
 }
