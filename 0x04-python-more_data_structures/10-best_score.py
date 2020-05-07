@@ -4,5 +4,7 @@ def best_score(a_dictionary):
         return None
     if a_dictionary is {}:
         return None
+    if type(a_dictionary) is not dict:
+        return None
     else:
         return max(a_dictionary)
