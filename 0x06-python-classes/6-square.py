@@ -4,8 +4,9 @@
 
 class Square():
     """Print square"""
-    def __init__(self, size=0):
+    def __init__(self, size=0, position=(0, 0)):
         self.__size = size
+        self.__position = position
 
     def area(self):
         """square area"""
@@ -35,3 +36,20 @@ class Square():
             print()
         if self.__size == 0:
             print()
+
+    @property
+    def position(self):
+        """square position"""
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """position setter"""
+        if type(value) != tuple:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
