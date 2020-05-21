@@ -4,8 +4,8 @@ import math
 
 
 class MagicClass:
+    """magic class function"""
     def __init__(self, radius=0):
-        """magic class function"""
         self.__radius = radius
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
@@ -15,4 +15,4 @@ class MagicClass:
         return self.__radius ** 2 * math.pi
 
     def circumference(self):
-        return 2 * math.pi * self.__radius
+        return math.pi * 2 * self.__radius
