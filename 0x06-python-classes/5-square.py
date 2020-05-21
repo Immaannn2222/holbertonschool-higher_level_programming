@@ -29,8 +29,8 @@ class Square():
 
     def my_print(self):
         """prints the square"""
-        for count1 in range(self.__size):
-            for count2 in range(self.__size):
+        for x in range(self.__size):
+            for y in range(self.__size):
                 print("#", end='')
             print()
         if self.__size == 0:
