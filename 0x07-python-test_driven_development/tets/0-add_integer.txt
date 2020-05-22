@@ -1,0 +1,40 @@
+The ``0-add_integer`` module
+======================
+
+Using ``0-add_integer``
+-------------------
+
+Import:
+
+>>> add_integer = __import__("0-add_integer").add_integer
+
+Now use it:
+
+>>> add_integer(0, 1)
+1
+
+>>> add_integer(6, )
+104
+
+>>> add_integer(0)
+98
+
+>>> add_integer(3, -7)
+-4
+
+>>> add_integer(-5, 5)
+0
+>>> add_integer(9999124443698, 963369)
+9999125407067
+
+>>> add_integer("gibbersid", 3)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(4, "ho")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
