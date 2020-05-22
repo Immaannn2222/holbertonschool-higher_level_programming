@@ -23,7 +23,7 @@ Now use it:
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
     >>> matrix = [
-    ...    ['l',8, 13],
+    ...    ['kl',8, 13],
     ...    10, -5, 206]
     ... ]
 
