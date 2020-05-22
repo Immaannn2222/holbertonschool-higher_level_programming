@@ -1,0 +1,22 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``3-say_my_name``
+----------------------
+
+Import:
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Now use it:
+
+>>> say_my_name("ADAM", "Iov")
+My name is ADAM Iov
+
+>>> say_my_name("Fatma")
+My name is Fatma 
+
+>>> say_my_name(12, "boat")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+

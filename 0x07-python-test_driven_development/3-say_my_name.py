@@ -5,8 +5,8 @@
 def say_my_name(first_name, last_name=""):
     """Func to print full name"""
 
-    if type(first_name) is not str:
+    if (type(first_name) is not str and first_name is not None):
         raise TypeError("first_name must be a string")
-    if type(last_name) is not str:
+    if (type(last_name) is not str and last_name is not None):
         raise TypeError("last_name must be a string")
     print("My name is {:s} {:s}".format(first_name, last_name))
