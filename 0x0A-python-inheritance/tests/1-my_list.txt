@@ -12,26 +12,14 @@ Now use it:
 
 >>> my_list = MyList()
 >>> my_list.append(6)
->>> my_list.append(-125)
 >>> my_list.append(120)
 >>> my_list.append(0)
 
 >>> print(my_list)
-[6, -125, 120, 0]
+[6, 120, 0]
 
 >>> my_list.print_sorted()
-[-125, 0, 6, 120]
-
->>> my_list.append("cat")
->>> print(m)
-[6, -125, 120, 0, 'cat']
-
->>> my_list.print_sorted()
-Traceback (most recent call last):
-...
-TypeError: unorderable types: str() < int()
-
-
+[0, 6, 120]
 
 >>> my_list = MyList()
 >>> my_list.append(3)
