@@ -4,27 +4,24 @@ The ``7-base_geometry`` module
 Using ``integer_validator``
 -------------------
 
-import:
-``integer_validator`` from the ``7-base_geometry.txt`` module:
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+bg = BaseGeometry()
 
-Now use it:
+bg.integer_validator("my_int", 12)
+bg.integer_validator("width", 89)
 
->>> x = BaseGeometry()
->>> x.integer_validator("age", "floe")
-Traceback (most recent call last):
-TypeError: <name> must be an integer
+try:
+    bg.integer_validator("name", "John")
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
 
->>> x.integer_validator("age", 0)
-Traceback (most recent call last):
-ValueError: <name> must be greater than 0
+try:
+    bg.integer_validator("age", 0)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
 
->>> x.integer_validator("distance", -12)
-Traceback (most recent call last):
-ValueError: <name> must be greater than 0
-
->>> x.integer_validator()
-Traceback (most recent call last):
-    ...
-TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+try:
+    bg.integer_validator("distance", -4)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
