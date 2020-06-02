@@ -14,7 +14,6 @@ Now use it:
 >>> my_list.append(6)
 >>> my_list.append(120)
 >>> my_list.append(0)
->>> my_list.append(-13)
 
 >>> print(my_list)
 [6, 120, 0]
