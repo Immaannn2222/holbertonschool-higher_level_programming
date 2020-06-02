@@ -1,15 +1,11 @@
-The ``1-my_list.py`` module
-======================
-
-Using ``1-my_list``
+Using ``MyList``
 ----------------------
-
-Import:
 
 >>> MyList = __import__('1-my_list').MyList
 
 Now use it:
 
+Subtle:
 >>> my_list = MyList()
 >>> my_list.append(6)
 >>> my_list.append(120)
@@ -21,6 +17,7 @@ Now use it:
 >>> my_list.print_sorted()
 [0, 6, 120]
 
+Negative Numbers:
 >>> my_list = MyList()
 >>> my_list.append(-8)
 >>> my_list.append(-2)
@@ -28,14 +25,15 @@ Now use it:
 >>> my_list.print_sorted()
 [-14, -8, -2]
 
+One element:
 >>> my_list = MyList()
 >>> my_list.append(3)
 >>> print(my_list)
 [3]
-
 >>> my_list.print_sorted()
 [3]
 
+None:
 >>> my_list = MyList(None)
 Traceback (most recent call last):
 ...
