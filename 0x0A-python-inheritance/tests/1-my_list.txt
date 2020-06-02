@@ -17,6 +17,18 @@ Subtle:
 >>> my_list.print_sorted()
 [0, 6, 120]
 
+Different Types:
+ >>> my_list.append("cat")
+
+>>> print(my_list)
+[6, 120, 0, 'cat']
+
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: unorderable types: str() < int()
+
+
 Negative Numbers:
 >>> my_list = MyList()
 >>> my_list.append(-8)
