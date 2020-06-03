@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Python I/O"""
 from sys import argv
 import json
 
