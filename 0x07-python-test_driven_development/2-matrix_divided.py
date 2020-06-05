@@ -24,5 +24,4 @@ def matrix_divided(matrix, div):
         for y in x:
             if type(y) is not int and type(y) is not float:
                 raise TypeError(te)
-            new.append(round((y / div), 2))
-    return new
+            return [[round(y / div, 2) for y in x] for x in matrix]
