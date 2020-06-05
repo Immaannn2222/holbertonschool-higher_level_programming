@@ -9,6 +9,10 @@ Import:
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Now use it:
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
 
      >>> matrix_divided(matrix, 0)
     Traceback (most recent call last):
@@ -47,3 +51,6 @@ Now use it:
     >>> matrix_divided()
     Traceback (most recent call last):
     TypeError: matrix_divided() missing 2 arguments
+
+     >>> matrix_divided([[]], 2)
+      [[]]
