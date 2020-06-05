@@ -9,6 +9,7 @@ Import:
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Now use it:
+
 matrix = [
     [1, 2, 3],
     [4, 5, 6]
