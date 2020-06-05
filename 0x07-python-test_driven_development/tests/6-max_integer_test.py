@@ -39,8 +39,8 @@ class TestMaxInteger(unittest.TestCase):
 
     def large_list(self):
         """large list"""
-        llist = [125, 12, -124, 11457, -147, 120, 158, 13, 1, 5, 8, 9, 11, 2]
-        self.assertEqual(11475, max_integer(llist))
+        llist = [2]
+        self.assertEqual(2, max_integer(llist))
 
     def test_none2(self):
         """none v2"""
