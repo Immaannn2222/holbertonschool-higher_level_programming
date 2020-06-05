@@ -12,6 +12,12 @@ class TestMaxInteger(unittest.TestCase):
         llist = [1, 2, 3]
         self.assertEqual(3, max_integer(llist))
 
+    def testA(self):
+        """at the beginning"""
+        llist = [5, 2, 3]
+        self.assertEqual(5, max_integer(llist))
+      
+
     def testB(self):
         """negative integers and zero"""
         llist = [-14751, 0, -12, -13]
@@ -46,6 +52,11 @@ class TestMaxInteger(unittest.TestCase):
         """negative"""
         llist_n = [-1, -2, -3]
         self.assertEqual(-1, max_integer(llist_n))
+    
+    def tests_max_str(self):
+        """integers"""
+        self.assertEqual(max_integer("fzk"), 'z')
+
 
 
 if __name__ == '__main__':

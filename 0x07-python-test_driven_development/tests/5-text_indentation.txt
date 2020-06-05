@@ -8,10 +8,18 @@ Using ``text_indentation``
 Import:
 
 >>> text_indentation = __import__("5-text_indentation").text_indentation
-
+ 
 Now use it:
 
-
+    >>> text_indentation("""Gib?rri::sh.""")
+    Gib?
+    <BLANKLINE>
+    rri:
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    sh.
+    <BLANKLINE>
 
     >>> text_indentation()
     Traceback (most recent call last):
@@ -24,3 +32,11 @@ Now use it:
     >>> text_indentation(10)
     Traceback (most recent call last):
     TypeError: text must be a string
+
+    >>> text_indentation("""wo\n?\nr\n:""")
+    wo
+    ?
+    <BLANKLINE>
+    r
+    :
+    <BLANKLINE>

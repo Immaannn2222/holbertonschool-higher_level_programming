@@ -7,6 +7,12 @@ Import:
 
 Now use it:
 
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
     >>> print_square(-13)
     Traceback (most recent call last):
     ValueError: size must be >= 0
