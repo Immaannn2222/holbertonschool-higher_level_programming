@@ -14,7 +14,7 @@ Now use it:
 >>> x = BaseGeometry()
 >>> x.integer_validator("age", "floe")
 Traceback (most recent call last):
-TypeError: floe must be an integer
+TypeError: age must be an integer
 
 >>> x.integer_validator("age", 0)
 Traceback (most recent call last):
