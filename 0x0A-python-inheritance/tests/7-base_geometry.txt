@@ -12,6 +12,10 @@ import:
 Now use it:
 
 >>> x = BaseGeometry()
+
+>>> x.integer_validator("distance", 4)
+True
+
 >>> x.integer_validator("age", "floe")
 Traceback (most recent call last):
 TypeError: age must be an integer
