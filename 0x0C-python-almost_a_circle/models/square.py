@@ -30,6 +30,7 @@ class Square(Rectangle):
         super(Square, type(self)).width.fset(self, size)
 
     def update(self, *args, **kwargs):
+        """update"""
         for i, j in enumerate(args):
             if i == 0:
                 self.id = j
