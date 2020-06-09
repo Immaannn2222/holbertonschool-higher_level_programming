@@ -40,3 +40,10 @@ class Base:
         if not json_srting or json_srting == "":
             json_srting = "[]"
         return json.loads(json_srting)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes already set"""
+        dummy = cls(1, 5, 6, 19)
+        dummy.update(**dictionary)
+        return dummy
