@@ -19,13 +19,16 @@ class Square(Rectangle):
     @property
     def size(self):
         """size getter"""
-        return super().width
+        return self.__size
 
     @size.setter
     def size(self, size):
         """size setter"""
-        super(Square, type(self)).width.fset(self, size)
-        super(Square, type(self)).width.fset(self, size)
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__size = value
 
     def update(self, *args, **kwargs):
         """update"""
