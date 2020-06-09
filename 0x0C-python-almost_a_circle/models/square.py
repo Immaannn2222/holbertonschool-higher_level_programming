@@ -11,6 +11,7 @@ class Square(Rectangle):
         self.size = size
         self.x = x
         self.y = y
+        self.id = id
 
     def __str__(self):
         """display"""
@@ -26,7 +27,12 @@ class Square(Rectangle):
     @size.setter
     def size(self, size):
         """size setter"""
-        super(Square, type(self)).width.fset(self, size)
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.__width = width
 
     def update(self, *args, **kwargs):
         """update"""
