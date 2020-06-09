@@ -15,10 +15,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """getter of width"""
         return self.__width
 
     @width.setter
     def width(self, width):
+        """setter of width"""
         if width <= 0:
             raise ValueError("width must be > 0")
         if isinstance(width, int) is False:
@@ -28,10 +30,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """getter of height"""
         return self.__height
 
     @height.setter
     def height(self, height):
+        """setter of height"""
         if height <= 0:
             raise ValueError("height must be > 0")
         if isinstance(height, int) is False:
@@ -41,10 +45,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """gettter of x"""
         return self.__x
 
     @x.setter
     def x(self, x):
+        """setter of x"""
         if x < 0:
             raise ValueError("x must be >= 0")
         if isinstance(x, int) is False:
@@ -54,10 +60,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """getter of y"""
         return self.__y
 
     @y.setter
     def y(self, y):
+        """setter of y"""
         if isinstance(y, int) is False:
             raise TypeError("y must be an integer")
         if y < 0:
@@ -66,9 +74,11 @@ class Rectangle(Base):
             self.__y = y
 
     def area(self):
+        """calculate the area"""
         return self.__width * self.__height
 
     def display(self):
+        """display the rectangle in #"""
         for l in range(self.__y):
             print("")
         for i in range(self.__height):
@@ -79,11 +89,13 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """str"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
                                                 self.id, self.x, self.y,
                                                 self.width, self.height)
 
     def update(self, *args, **kwargs):
+        """updayte"""
         for i, j in enumerate(args):
             if i == 0:
                 self.id = j
@@ -109,6 +121,7 @@ class Rectangle(Base):
                 self.y = v
 
     def to_dictionary(self):
+        """returns a dict representation"""
         """returns the dictionary representation of a Rectangle"""
         rect_dict = {'x': self.x, 'y': self.y, 'id': self.id,
                      'height': self.height, 'width': self.width}
