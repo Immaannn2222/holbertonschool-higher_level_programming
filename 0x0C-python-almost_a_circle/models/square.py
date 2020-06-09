@@ -28,6 +28,7 @@ class Square(Rectangle):
     def size(self, size):
         """size setter"""
         super(Square, type(self)).width.fset(self, size)
+        super(Square, type(self)).width.fset(self, size)
 
     def update(self, *args, **kwargs):
         """update"""
