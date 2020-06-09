@@ -9,6 +9,12 @@ class Square(Rectangle):
         """Class constructor"""
         self.size = size
         super().__init__(size, size, x, y, id)
+    
+    def __str__(self):
+        """display"""
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
+                                                self.id, self.x, self.y,
+                                                self.width, self.height)
 
     @property
     def size(self):
@@ -24,12 +30,6 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = value
         self.height = value
-
-    def __str__(self):
-        """display"""
-        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__,
-                                                self.id, self.x, self.y,
-                                                self.width, self.height)
 
     def update(self, *args, **kwargs):
         """update"""
