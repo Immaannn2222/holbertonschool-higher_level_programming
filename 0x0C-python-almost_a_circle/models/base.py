@@ -37,7 +37,7 @@ class Base:
     @staticmethod
     def from_json_string(json_srting):
         """returns the JSON string representation"""
-        if json_srting is None or json_srting == "":
-            return"[]"
+        if not json_srting or json_srting == "":
+            json_srting = "[]"
         else:
             return json.loads(json_srting)
