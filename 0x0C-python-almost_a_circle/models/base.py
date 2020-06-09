@@ -31,13 +31,12 @@ class Base:
         if list_objs is not None:
             for j in list_objs:
                 li.append(cls.to_dictionary(j))
-            with open(filname, "w") as fi:
-                fi.write(cls.to_json_string(li))
+        with open(filname, "w") as fi:
+            fi.write(cls.to_json_string(li))
 
     @staticmethod
     def from_json_string(json_srting):
         """returns the JSON string representation"""
         if not json_srting or json_srting == "":
             json_srting = "[]"
-        else:
-            return json.loads(json_srting)
+        return json.loads(json_srting)
