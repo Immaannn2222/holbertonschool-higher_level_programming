@@ -7,8 +7,10 @@ class Square(Rectangle):
     """Class Square inherits from Rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
         """Class constructor"""
-        self.size = size
         super().__init__(size, size, x, y, id)
+        self.size = size
+        self.x = x
+        self.y = y
 
     def __str__(self):
         """display"""
@@ -24,11 +26,7 @@ class Square(Rectangle):
     @size.setter
     def size(self, size):
         """size setter"""
-        if type(value) != int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
-        self.__size = value
+        super(Square, type(self)).width.fset(self, size)
 
     def update(self, *args, **kwargs):
         """update"""
