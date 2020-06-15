@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base module"""
 import json
+import os.path
 import turtle
 
 
@@ -57,12 +58,13 @@ class Base:
         """returns a list of instances"""
         li = []
         filname = cls.__name__+".json"
-        with open(filname, "r+") as fi:
-            j = cls.from_json_string(fi.read())
-        if j is not None:
-            for i in j:
-                li.append(cls.create(**i))
-        return li
+        if os.path.exists(filname):
+            with open(filname, "r+") as fi:
+                for j in fi:
+                    t = cls.from_json_string(j)
+                for i in t:
+                    li.append(cls.create(**i))
+            return li
 
     @staticmethod
     def draw(list_rectangles, list_squares):
