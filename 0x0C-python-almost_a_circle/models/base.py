@@ -57,18 +57,38 @@ class Base:
     def load_from_file(cls):
         """returns a list of instances"""
         li = []
-        filname = cls.__name__+".json"
-        if os.path.exists(filname):
+        if os.path.exists(cls.__name__+".json"):
             with open(filname, "r+") as fi:
                 for j in fi:
                     t = cls.from_json_string(j)
                 for i in t:
                     li.append(cls.create(**i))
-            return li
+        return li
 
     @staticmethod
     def draw(list_rectangles, list_squares):
         """opens a window and draws all the Rectangles and Squares"""
         t = turtle.Turtle()
-        t.color("green")
+        t.color("blue", "red")
         t.shape("turtle")
+
+        for x in list_rectangles:
+            turtle.bgcolor("green")
+            t.fd(x.height)
+            t.rt(90)
+            t.fd(x.width)
+            t.rt(90)
+            t.fd(x.height)
+            t.rt(90)
+            t.fd(x.width)
+            t.rt(90)
+
+        for y in list_squares:
+            t.fd(x.height)
+            t.lt(90)
+            t.fd(x.width)
+            t.lt(90)
+            t.fd(x.height)
+            t.rt(90)
+            t.fd(x.width)
+            t.lt(90)
