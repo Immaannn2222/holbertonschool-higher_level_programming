@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base module"""
 import json
+import turtle
 
 
 class Base:
@@ -50,3 +51,22 @@ class Base:
             dummy = cls(4)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        li = []
+        filname = cls.__name__+".json"
+        with open(filname, "r+") as fi:
+            j = cls.from_json_string(fi.read())
+        if j is not None:
+            for i in j:
+                li.append(cls.create(**i))
+        return li
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """opens a window and draws all the Rectangles and Squares"""
+        t = turtle.Turtle()
+        t.color("green")
+        t.shape("turtle")
