@@ -16,6 +16,5 @@ if __name__ == "__main__":
     session = Session(engine)
     x = session.query(City, State).filter(City.state_id == State.id)
     for city, state in x:
-        session.delete(states)
-    session.commit()
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
