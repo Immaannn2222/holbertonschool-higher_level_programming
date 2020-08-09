@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base
 
 
-class State(Base):
+class City(Base):
     """Documentation"""
     __tablename__ = 'cities'
     id = Column(Integer, primary_key=True)
