@@ -15,7 +15,8 @@ if __name__ == "__main__":
 
     session = Session(engine)
     if session.query(State).filter(State.name == argv[4]).first():
-        print("{}".format(state.id))
+        print("{}".format(session.query(State).filter(State.name == argv[4])
+                          .first().id))
     else:
         print("Not found")
     session.close()
