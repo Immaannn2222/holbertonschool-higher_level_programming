@@ -9,6 +9,6 @@ from model_state import Base
 class State(Base):
     """Documentation"""
     __tablename__ = 'cities'
-    id = Column(Integer, primary_key=True, unique=True, nullable=False)
+     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey('states.id'))
