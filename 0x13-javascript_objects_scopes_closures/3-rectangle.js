@@ -14,16 +14,5 @@ const Rectangle = class {
       console.log('X'.repeat(this.width));
     }
   }
-
-  rotate () {
-    const inter = this.width;
-    this.width = this.height;
-    this.height = inter;
-  }
-
-  double () {
-    (this.height = this.height * 2);
-    (this.width = this.width * 2);
-  }
 };
 module.exports = Rectangle;
