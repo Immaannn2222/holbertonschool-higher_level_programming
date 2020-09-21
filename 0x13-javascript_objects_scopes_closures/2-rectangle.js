@@ -5,7 +5,7 @@ const Rectangle = class {
       this.width = w;
       this.height = h;
     } else {
-      new Object();
+      Rectangle === {};
     }
   }
 };
