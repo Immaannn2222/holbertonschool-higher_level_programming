@@ -5,5 +5,4 @@ const Rectangle = class {
     this.height = h;
   }
 };
-console.log(Rectangle.name);
 module.exports = Rectangle;

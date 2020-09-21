@@ -9,5 +9,4 @@ const Rectangle = class {
     }
   }
 };
-console.log(Rectangle.name);
 module.exports = Rectangle;
