@@ -1,7 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-const U_R_L = 'https://swapi-api.hbtn.io/api/films';
-request(U_R_L, function (error, response, body) {
+request.get(process.argv[2], function (error, response, body) {
   if (error) {
     console.log(error);
   } else if ('response.statusCode === 200') {
